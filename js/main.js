@@ -1,3 +1,14 @@
+
+function initLucideIcons() {
+  if (typeof lucide !== 'undefined' && lucide.createIcons) {
+    lucide.createIcons();
+  }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLucideIcons);
+} else {
+  initLucideIcons();
+}
 /**
  * MJ Franco Imóveis — Script Principal
  * Funcionalidades: Scroll do Header, Menu Mobile, Vitrine com Filtros,
